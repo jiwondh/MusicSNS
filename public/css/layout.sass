@@ -1,0 +1,143 @@
+$backgroundColor: #fafafa
+$headerLineColor: rgba(158, 158, 158, 0.35)
+$headerHeight:70px
+
+body
+  margin: 0px
+  background-color: $backgroundColor
+  
+  #header 
+    width: 100%
+    height: $headerHeight - 10px
+    background-color: white
+    padding-top: 5px
+    padding-bottom: 5px
+    border-bottom-style: solid
+    border-bottom-color: $headerLineColor
+
+    #header_center
+      padding-top: 5px
+      padding-bottom: 5px
+      height: $headerHeight - 20px
+    
+      ._header 
+        padding-top: 3px
+        padding-bottom: 3px
+        height: $headerHeight - 26px
+        display: inline-block
+        text-align: center 
+        position: absolute
+
+      #_header_1
+        width: 20%
+        margin-left: 13%
+        
+        .logo
+          padding-top: 1px
+          padding-bottom: 1px
+          height: $headerHeight - 28px
+          display: inline-block
+          cursor: pointer
+ 
+        #logo_image
+          img
+            padding-top: 1px
+            padding-left: 2px
+        #logo_name    
+          a
+            padding-top: 1px
+            padding-bottom: 10px
+            margin: 0px
+            text-decoration: none
+            font-family: 'Cookie', cursive
+            font-size: 43px
+            color: rgb(122, 122, 124)
+
+      #_header_2
+        width: 33%
+        left: 33%
+
+        input
+          background-image: url(/images/search.png)
+          background-repeat: no-repeat
+          text-indent: 25px
+          border-radius: 5px
+          width: 230px
+          height: 20px
+          border-top-style: solid
+          border-left-style: solid
+          border-color: lightgrey
+          background-position-x: 4px
+          background-position-y: 4px
+          margin-top: 10px 
+          
+          &:focus
+            outline: none
+        
+        #userSearch
+          width: 230px
+          display: none
+          height: 300px
+          margin-top: 11px
+          background-color: white
+          border-radius: 5px
+          border-style: solid
+          border-color: $headerLineColor
+          border-width: 2px
+          box-shadow: 0px 0px 20px 1px rgba(181,181,181,1)
+          
+          a
+            text-decoration: none
+            color: black
+
+          .userResult
+            border-top-color: $headerLineColor
+            border-top-style: solid
+            border-top-width: 1px
+            display: inline-flex
+            padding-left: 10%
+            padding-right: 10%
+            padding-top: 15px
+            padding-bottom: 15px
+            width: 80%
+            cursor: pointer
+
+            &:hover
+              background-color: #fafafa
+
+            .profileImage
+              width: 20%
+              border-radius: 50%
+              background-color: red
+              background-image: url(/images/user_profile.jpg)
+              background-repeat: no-repeat
+              background-size: cover
+
+            .profileDetails
+              margin-left: 10%
+              .profileId
+                font-weight: 600
+                font-size: 15px
+              .profileName
+                color: #aaa
+                font-size: 14px
+                float: left
+  
+      #_header_3
+        width: 20%
+        margin-right: 13%
+        left: 66%
+
+        ._header_3_icon
+          display: inline-block
+          margin-right: 18px
+          margin-top: 5px
+          cursor: pointer
+
+  .body-center
+    margin-left: 15%
+    margin-right: 15%
+    margin-top: 60px
+    //height: 700px
+    width: 70%
+    //background-color: red

@@ -1,0 +1,173 @@
+#userPage #userTitle {
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 20px;
+  height: 200px;
+  width: 96%;
+  display: inline-flex; }
+
+#userPage #userTitle #userImg {
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 20%;
+  height: 100%;
+  display: inline-block;
+  border-radius: 50%;
+  background-image: url(/images/user_profile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#userPage #userTitle #userProfile {
+  width: 50%;
+  height: 100%;
+  display: inline-block; }
+
+#userPage #userTitle #userProfile #user1 {
+  width: 100%;
+  height: 40%;
+  display: inline-flex; }
+
+#userPage #userTitle #userProfile #user1 #userId {
+  padding-right: 10px;
+  height: 100%;
+  font-size: 40px;
+  font-weight: 200;
+  display: inline-block; }
+
+#userPage #userTitle #userProfile #user1 #editProfile {
+  height: 100%;
+  margin-right: 10px;
+  display: inline-block; }
+
+#userPage #userTitle #userProfile #user1 #editProfile button {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(158, 158, 158, 0.35);
+  background-color: #fafafa; }
+
+#userPage #userTitle #userProfile #user1 #more {
+  height: 100%;
+  margin-top: 8px;
+  cursor: pointer;
+  display: inline-block; }
+
+#userPage #userTitle #userProfile #user2 {
+  width: 100%;
+  height: 25%;
+  display: inline-flex; }
+
+#userPage #userTitle #userProfile #user2 .user-2 {
+  width: 28%;
+  height: 100%;
+  font-size: 18px;
+  display: inline-block;
+  margin-right: 1%; }
+
+#userPage #userTitle #userProfile #user3 {
+  width: 100%;
+  height: 30%;
+  font-size: 18px;
+  font-weight: 600; }
+
+#userPage #userPost {
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 20px;
+  padding: 1%;
+  width: 96%;
+  display: inline-fled; }
+
+#userPage #userPost .post {
+  width: 30%;
+  margin: 1%;
+  background-color: black;
+  display: inline-block; }
+
+#userPage #userPost .post img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer; }
+
+#userPage #userPost .post img:hover {
+  opacity: 0.7; }
+
+#userPage .modal {
+  position: fixed;
+  z-index: 1;
+  padding-top: 130px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7); }
+
+#userPage .modal .modal-content {
+  background-color: #fefefe;
+  margin-left: 9%;
+  display: inline-flex;
+  width: 80%;
+  height: 500px; }
+
+#userPage .modal .modal-content #video {
+  display: inline-block;
+  width: 60%; }
+
+#userPage .modal .modal-content #video iframe {
+  width: 100%;
+  height: 100%; }
+
+#userPage .modal .modal-content #description {
+  width: 40%; }
+
+#userPage .modal .modal-content #description #profile {
+  width: 80%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: inline-flex; }
+
+#userPage .modal .modal-content #description #profile #profileImage {
+  width: 13%;
+  border-radius: 50%;
+  background-image: url(/images/user_profile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#userPage .modal .modal-content #description #profile #profileId {
+  margin-left: 5%;
+  margin-top: 15px;
+  font-size: medium;
+  font-weight: 700; }
+
+#userPage .modal .modal-content #description #details {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: 600;
+  width: 80%;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(158, 158, 158, 0.35); }
+
+#userPage .modal .modal-content #description #videoDescription {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 80%; }
+
+#userPage .modal .modal-content #description #comment {
+  background-color: grey; }

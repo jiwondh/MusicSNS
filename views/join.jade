@@ -1,0 +1,17 @@
+extends ./layout
+block content
+	h1 
+		a(href='/join')⭐️  Join ⭐️
+	
+	article
+		form(action='/join_receiver' method='post')
+			p
+				input(type='text' name='name' placeholder='name')		
+			p
+				input(type='text' name='password' placeholder='password')
+			p
+				input(type='text' name='password_confirmation' placeholder='password_confirmation')
+			p
+				input(type='submit')
+
+

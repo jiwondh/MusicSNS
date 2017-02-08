@@ -1,0 +1,48 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		style
+			include ../public/css/layout.css
+			include ../public/css/user.css
+			include ../public/css/home.css
+			include ../public/css/hover.css
+		script(src='/javascripts/jquery-3.1.1.min.js')
+		script(src='/javascripts/new.js')
+		script(src='/javascripts/user.js')
+		script(src='/javascripts/home.js')
+		script(src='/javascripts/header.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js')
+		link(href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet')
+	body
+		#header
+			#header_center
+				#_header_1(class='_header') 
+					#logo_name(class='logo')
+						a(href='/') Humming
+					#logo_image(class='logo')
+						a(href='/')
+							img(src='/images/music.png' height='35px' width='35px')
+				#_header_2(class='_header')
+					form(action='/new' method='post')
+						input(type='text' id='userSearchForm' name='writer' autocomplete='off' placeholder='검색')
+					#userSearch
+						//
+							#userResult1(class='userResult')
+								div(class='profileImage')
+								#profileDetails
+									#profileId jiwondh
+									#profileName 지원
+							#userResult2(class='userResult')
+				#_header_3(class='_header')
+					#find_people(class='_header_3_icon')
+						img(src='/images/internet.png' height='35px' width='35px')
+					#feed(class='_header_3_icon')
+						img(src='/images/like.png' height='35px' width='35px')
+					#user(class='_header_3_icon')
+						a(href='/'+authId)
+							img(src='/images/user.png' height='35px' width='35px')
+		article
+			block content
+
+

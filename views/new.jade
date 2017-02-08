@@ -1,0 +1,23 @@
+extends ./layout
+block content
+	h1
+		a(href='/new') New
+
+	article
+		form(action='/new' method='post')
+			p
+				input(type='text' name='title' placeholder='title')
+			p
+				input(type='text' name='writer' placeholder='writer name')
+			p
+				input(id='searchForm' type='text' name='keword' placeholder='음악 키워드')
+			
+			#search
+
+
+			p
+				textarea(name='description' placeholder='description')
+			p
+				input(type='submit')
+
+

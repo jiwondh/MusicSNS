@@ -1,0 +1,48 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		style
+			include ../public/css/login.css
+		script(src='/javascripts/jquery-3.1.1.min.js')
+		script(src='/javascripts/login.js')
+		link(href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet')
+	body
+		#center
+			#left 
+				img(src='/images/iphone7.png')
+			#right
+				#login_form
+					#logo_name Humming
+					#join_group
+						#caption 친구들의 음악을 감상하려면 가입하세요.
+						form(id='_join' action='/auth/register' method='post')
+							#join_eamil(class='_form')
+								input(type='text' name='email' placeholder='이메일 주소' autocomplete='off')
+							#join_fullName(class='_form')
+								input(type='text' name='username' placeholder='성명' autocomplete='off')
+							#join_name(class='_form')
+								input(type='text' name='name' placeholder='사용자 이름' autocomplete='off')
+							#join_password(class='_form')
+								input(type='password' name='password' placeholder='비밀번호' autocomplete='off')
+							#join_button(class='submit_button')
+								button(type='submit') 가입
+						
+						#small_caption 가입하면 Humming의 약관 및 개인정보 <br/>처리방침에 동의하게 됩니다.
+					#login_group
+						form(id='_login' action='/' method='post')
+							#login_name(class='_form')
+								input(type='text' name='login_name' placeholder='사용자 이름' autocomplete='off')
+							#login_password(class='_form')
+								input(type='password' name='login_password' placeholder='비밀번호' autocomplete='off')
+							#login_button(class='submit_button')
+								button(type='submit') 로그인 
+						#other_login
+							a 비밀번호를 잊으셨나요?
+
+				#question
+					#login(class='_question') 계정이 있으신가요?
+						span 로그인
+					#join(class='_question') 계정이 없으신가요?
+						span 가입하기
+		

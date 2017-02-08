@@ -1,0 +1,22 @@
+{
+  "name": "musicsns",
+  "version": "1.0.0",
+  "description": "musicsns",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-mysql-session": "^1.0.0-rc.0",
+    "express-session": "^1.15.0",
+    "hover.css": "^2.0.2",
+    "jade": "^1.11.0",
+    "node-mysql": "^0.4.2",
+    "supervisor": "^0.12.0",
+    "underscore": "^1.8.3"
+  }
+}

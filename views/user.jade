@@ -1,0 +1,45 @@
+extends ./layout
+block content
+	#userPage(class='body-center')
+		#userTitle
+			#userImg
+			#userProfile
+				#user1
+					#userId= authId
+					#editProfile
+						a(href='/')
+							button 프로필 편집
+					#more
+						img(src='/images/moreButton.png' height='25px' width='25px')
+
+				#user2
+					#postNumber(class='user-2') 게시물 <b>#{posts.length}</b>개
+					#FollowerNumber(class='user-2') 팔로워
+					#FollowNumber(class='user-2') 팔로우
+				#user3= user.username
+		#userPost
+			each post in posts
+				div(class='post' id='post_'+post.PostId )
+					a(href='/'+authId+'?postId='+post.PostId)
+						img(src='http://img.youtube.com/vi/'+post.VideoId+'/0.jpg')
+		
+		if sPost
+			#postModal(class='modal')
+				div(class='modal-content')
+					#video(data-id= authId)
+						iframe(
+								width="560" 
+								height="315" 
+								src="https://www.youtube.com/embed/"+sPost.VideoId+"?rel=0" 
+								frameborder="0" 
+								allowfullscreen
+							)
+
+					#description
+						#profile
+							#profileImage
+							#profileId=authId
+						#details 좋아요
+						#videoDescription <b>#{authId}</b>  #{sPost.Description}
+						#comment
+						#likes

@@ -1,0 +1,42 @@
+extends ./layout
+block content
+	#timeline(class='body-center')
+		#newPost(data-user_id=authId)
+			#closeIcon
+				img(src='/images/cancel.png' height='20px' width='20px')
+			#plusIcon 
+				img(src='/images/add.png' height='85px' width='85px')
+			#plusText 음악 추가
+			#searchVideo
+				form
+					p
+						input(id='musicKeword' type='text' name='keword' autocomplete='off' placeholder='음악을 검색하세요.')
+			#preview
+			#contents
+				#video
+				#description
+					form
+						p
+							textarea(id='videoDescription' name='description' placeholder='설명 쓰기')
+					#buttonGroup
+						#backButton(class='hvr-fade') 이전
+						#uploadButton(class='hvr-fade') 공유하기
+
+		#posts
+			#post1(class='post')
+				#header1(class='post-header')
+				#video1(class='post-video')
+			#post2(class='post')
+				#haeader2(class='post-header')
+				#video2(class='post-video')
+	ul
+		each topic in topics
+			li
+				h2
+					a(href='/'+topic)= topic
+	//	
+		article
+			h2=title
+			=description
+		div
+			a(href='/topic/new') new

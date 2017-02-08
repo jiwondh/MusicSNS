@@ -1,0 +1,11 @@
+#search {
+  background-color: lightgrey;
+  width: 600px;
+  height: 300px;
+  display: none;
+  border-radius: 7px; }
+
+.searchResult {
+  display: inline-block; }
+
+/*# sourceMappingURL=new.css.map */
