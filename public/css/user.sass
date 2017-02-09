@@ -1,5 +1,6 @@
 $backgroundColor: #fafafa
 $headerLineColor: rgba(158, 158, 158, 0.35)
+$lightBlue: #3897f0
 
 #userPage
   #userTitle
@@ -43,7 +44,7 @@ $headerLineColor: rgba(158, 158, 158, 0.35)
           //background-color: blue
           display: inline-block
 
-        #editProfile
+        #profileButton
           height: 100%
           margin-right: 10px
           //background-color: hotpink
@@ -62,7 +63,14 @@ $headerLineColor: rgba(158, 158, 158, 0.35)
             border-style: solid
             border-width: 1px
             border-color: $headerLineColor
+
+          #editProfile, #unfollowButton 
             background-color: $backgroundColor
+
+          #followButton
+            background-color: $lightBlue
+            color: white
+
 
         #more
           height: 100%
@@ -78,7 +86,7 @@ $headerLineColor: rgba(158, 158, 158, 0.35)
         display: inline-flex
 
         .user-2
-          width: 28%
+          padding-right: 40px
           height: 100%
           font-size: 18px
           //background-color: white
@@ -192,3 +200,29 @@ $headerLineColor: rgba(158, 158, 158, 0.35)
         
         #comment
           background-color: grey
+
+  #logoutModal
+    display: none
+    #logoutModalContent
+      margin-left: 37.5%
+      margin-top: 150px
+      width: 25%
+      height: 120px
+      display: block
+
+      .lmButton
+        width: 100%
+        height: 20px
+        text-align: center
+        padding-top: 20px
+        padding-bottom: 20px
+
+      #cancleButton
+        border-top-style: solid
+        border-top-width: 1px
+        border-top-color: $headerLineColor
+      
+      #logoutButton
+        text-decoration: none
+        color: black
+        

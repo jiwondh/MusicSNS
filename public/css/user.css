@@ -34,12 +34,12 @@
   font-weight: 200;
   display: inline-block; }
 
-#userPage #userTitle #userProfile #user1 #editProfile {
+#userPage #userTitle #userProfile #user1 #profileButton {
   height: 100%;
   margin-right: 10px;
   display: inline-block; }
 
-#userPage #userTitle #userProfile #user1 #editProfile button {
+#userPage #userTitle #userProfile #user1 #profileButton button {
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
@@ -51,8 +51,14 @@
   border-radius: 3px;
   border-style: solid;
   border-width: 1px;
-  border-color: rgba(158, 158, 158, 0.35);
+  border-color: rgba(158, 158, 158, 0.35); }
+
+#userPage #userTitle #userProfile #user1 #profileButton #editProfile, #userPage #userTitle #userProfile #user1 #profileButton #unfollowButton {
   background-color: #fafafa; }
+
+#userPage #userTitle #userProfile #user1 #profileButton #followButton {
+  background-color: #3897f0;
+  color: white; }
 
 #userPage #userTitle #userProfile #user1 #more {
   height: 100%;
@@ -66,7 +72,7 @@
   display: inline-flex; }
 
 #userPage #userTitle #userProfile #user2 .user-2 {
-  width: 28%;
+  padding-right: 40px;
   height: 100%;
   font-size: 18px;
   display: inline-block;
@@ -171,3 +177,29 @@
 
 #userPage .modal .modal-content #description #comment {
   background-color: grey; }
+
+#userPage #logoutModal {
+  display: none; }
+
+#userPage #logoutModal #logoutModalContent {
+  margin-left: 37.5%;
+  margin-top: 150px;
+  width: 25%;
+  height: 120px;
+  display: block; }
+
+#userPage #logoutModal #logoutModalContent .lmButton {
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+#userPage #logoutModal #logoutModalContent #cancleButton {
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(158, 158, 158, 0.35); }
+
+#userPage #logoutModal #logoutModalContent #logoutButton {
+  text-decoration: none;
+  color: black; }

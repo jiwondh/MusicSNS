@@ -1,21 +1,28 @@
 extends ./layout
 block content
-	#userPage(class='body-center')
+	#userPage(class='body-center' data-id=authId)
 		#userTitle
 			#userImg
 			#userProfile
 				#user1
 					#userId= authId
-					#editProfile
-						a(href='/')
-							button 프로필 편집
+					#profileButton
+						if sessionId == authId
+							a(href='/')
+								button(id='editProfile') 프로필 편집
+						else if follower
+							a(href='/unfollow?followedId='+authId)
+								button(id='unfollowButton') 팔로잉
+						else
+							a(href='/follow?followedId='+authId)
+								button(id='followButton') 팔로우
 					#more
 						img(src='/images/moreButton.png' height='25px' width='25px')
 
 				#user2
 					#postNumber(class='user-2') 게시물 <b>#{posts.length}</b>개
-					#FollowerNumber(class='user-2') 팔로워
-					#FollowNumber(class='user-2') 팔로우
+					#FollowerNumber(class='user-2')
+					#FollowNumber(class='user-2')
 				#user3= user.username
 		#userPost
 			each post in posts
@@ -23,6 +30,12 @@ block content
 					a(href='/'+authId+'?postId='+post.PostId)
 						img(src='http://img.youtube.com/vi/'+post.VideoId+'/0.jpg')
 		
+		#logoutModal(class='modal')
+			#logoutModalContent(class='modal-content')
+				a(href='/Logout')
+					#logoutBUtton(class='lmButton hvr-fade') 로그아웃
+				#cancleButton(class='lmButton hvr-fade') 취소
+
 		if sPost
 			#postModal(class='modal')
 				div(class='modal-content')
@@ -30,7 +43,7 @@ block content
 						iframe(
 								width="560" 
 								height="315" 
-								src="https://www.youtube.com/embed/"+sPost.VideoId+"?rel=0" 
+								src="https://www.youtube.com/embed/"+sPost.VideoId+"?rel=0&autoplay=1" 
 								frameborder="0" 
 								allowfullscreen
 							)
@@ -43,3 +56,4 @@ block content
 						#videoDescription <b>#{authId}</b>  #{sPost.Description}
 						#comment
 						#likes
+		

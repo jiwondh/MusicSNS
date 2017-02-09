@@ -86,4 +86,11 @@ $(document).ready(function(){
 			$(window).attr('location','/');
 		});
 	});
+
+	//프로필 크기 사진 맞추기
+	$('.post-header .profileImage').height($('.post-header .profileImage').width());
+	
+	$(window).on('resize', function(){
+		$('.post-header .profileImage').height($('.post-header .profileImage').width());	
+	});
 });

@@ -31,6 +31,21 @@ $(document).ready(function(){
 		$.cookie("scroll", $(document).scrollTop() );
 
 	});
+	
+	$('#more img').on('click', function(){
+		$('#logoutModal').show();
+		var logout = document.getElementById('logoutModal');
+		window.onclick = function(event) {
+			if( event.target == logout){
+				$('#logoutModal').hide();		
+			}
+		};
+
+	});
+	
+	$('#logoutModal #cancleButton').on('click', function(){
+		$('#logoutModal').hide();
+	});
 
 	var searchInput = document.getElementById('userSearchForm');
 	window.onclick = function(event) {
@@ -41,5 +56,21 @@ $(document).ready(function(){
 			$('#userSearch').hide();
 		}
 	};
+
+	var UserId = $('#userPage').data("id");
+	$.getJSON("/api/follower/"+UserId, function(response) {
+		$('#FollowerNumber').append('팔로워 <b>'+response.length+'</b>명');
+		$.each(response, function(i, user) {  
+		
+		}, 0);
+	}).done(function(){
+	});
+	$.getJSON("/api/followed/"+UserId, function(response) {
+		$('#FollowNumber').append('팔로우 <b>'+response.length+'</b>명');
+		$.each(response, function(i, user) {  
+		
+		}, 0);
+	}).done(function(){
+	});
 
 });

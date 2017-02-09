@@ -11,6 +11,7 @@ $headerLineColor: rgba(158, 158, 158, 0.35)
     border-style: solid
     border-color: $headerLineColor
     border-width: 1px
+    box-shadow: 2px 5px 10px 1px #b5b5b5
     display: inline-block
     background-color: #fff
     text-align: center
@@ -141,11 +142,33 @@ $headerLineColor: rgba(158, 158, 158, 0.35)
       border-color: $headerLineColor
       border-width: 1px
       background-color: #fff
+      box-shadow: 2px 5px 10px 1px #b5b5b5;
       
       .post-header
         height: 70px
+        width: 100%
         border-bottom-style: solid
         border-bottom-color: $headerLineColor
         border-width: 1px
+        display: inline-flex
 
-      
+        .profileImage
+          //background-color: green
+          width: 8%
+          border-radius: 50%
+          background-image: url(/images/user_profile.jpg)
+          background-repeat: no-repeat
+          background-size: cover
+          margin-left: 3%
+          margin-top: 10px
+
+        .profileId
+          margin-left: 5%
+          margin-top: 15px
+          font-size: medium
+          font-weight: 700
+          margin-left: 3%
+          margin-top: 25px
+
+      .post-video
+        height: 430px
